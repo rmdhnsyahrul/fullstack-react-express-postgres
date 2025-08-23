@@ -1,0 +1,16 @@
+{
+  "name": "my-app",
+  "private": false,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "client": "npm --prefix client start",
+    "server": "npm --prefix server start",
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm start --workspace client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
